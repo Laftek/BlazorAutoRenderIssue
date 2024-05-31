@@ -1,6 +1,6 @@
 ﻿@page "/counter"
-@rendermode InteractiveAuto
-
+@rendermode @(new InteractiveAutoRenderMode(prerender:false))
+<h1 class="text-muted">Render @(OperatingSystem.IsBrowser() ? "Wasm" : "Server")</h1>
 <PageTitle>Counter</PageTitle>
 
 <h1>Counter</h1>
